@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>My Dream Travels</title>
+
+<style>
+
+/* UNIVERSAL SELECTOR */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ELEMENT SELECTOR */
+
+body {
+    margin: 0;
+    background-color: #FFF8F0;
+    color: #443B50;
+    font-family: Arial;
+}
+
+/* HEADER */
+
+header {
+    background-color: #E5D9FF;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #443B50;
+    font-size: 30px;
+}
+
+/* NAVIGATION */
+
+nav {
+    background-color: #443B50;
+    padding: 18px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    color: #E5D9FF;
+    font-size: 18px;
+}
+
+/* HOME SECTION */
+
+#home {
+    background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+
+    text-align: center;
+    color: white;
+    padding: 110px 20px;
+}
+
+#home h1 {
+    font-size: 45px;
+    text-shadow: 2px 2px 5px black;
+}
+
+#home p {
+    font-size: 20px;
+}
+
+/* BUTTON */
+
+button {
+    background-color: #E5D9FF;
+    color: #443B50;
+    padding: 12px 25px;
+    border: 2px solid #443B50;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #A46AC8;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* ABOUT */
+
+#about {
+    padding: 35px;
+    text-align: center;
+}
+
+#about p {
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+/* DESTINATIONS */
+
+#destinations {
+    padding: 30px;
+    text-align: center;
+}
+
+#destinations h1 {
+    color: #8B65A9;
+    font-size: 32px;
+}
+
+/* CLASS SELECTOR */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* DESTINATION CARDS */
+
+.card {
+    background-color: white;
+    width: 250px;
+    padding: 15px;
+    margin: 10px;
+
+    border: 2px solid #E5D9FF;
+    border-radius: 15px;
+
+    outline: 2px solid #D8CBE8;
+    outline-offset: 3px;
+
+    box-shadow: 0px 5px 12px #D8CBE8;
+
+    transition: 0.4s;
+}
+
+/* CARD HOVER */
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0px 10px 25px #AFA0C5;
+}
+
+/* IMAGE */
+
+.card img {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+/* IMAGE HOVER */
+
+.card img:hover {
+    transform: scale(1.07);
+}
+
+.card h3 {
+    color: #8B65A9;
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+/* EXPERIENCES */
+
+#experiences {
+    background-color: #E5D9FF;
+    padding: 35px;
+    text-align: center;
+}
+
+#experiences p {
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+#experiences p:hover {
+    color: #A46AC8;
+    letter-spacing: 2px;
+}
+
+/* LIST */
+
+.travel-list {
+    display: inline-block;
+    text-align: left;
+    line-height: 2;
+}
+
+/* GALLERY */
+
+#gallery {
+    padding: 30px;
+    text-align: center;
+}
+
+figure {
+    display: inline-block;
+    width: 260px;
+    margin: 15px;
+    transition: 0.4s;
+}
+
+figure img {
+    width: 100%;
+    height: 180px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+figure:hover {
+    transform: scale(1.05);
+}
+
+figcaption {
+    color: #8B65A9;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* TRAVEL TABLE */
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    border: 2px solid #A46AC8;
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #E5D9FF;
+}
+
+tr:hover {
+    background-color: #F3EFFF;
+}
+
+/* TRAVEL TIPS */
+
+.tips {
+    background-color: #E5D9FF;
+    padding: 25px;
+    margin: 30px;
+    border-radius: 15px;
+    overflow: auto;
+}
+
+.tips img {
+    width: 180px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+/* CONTACT FORM */
+
+#contact {
+    padding: 30px;
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+
+    border: 2px solid #E5D9FF;
+    border-radius: 15px;
+}
+
+input, textarea, select {
+    width: 90%;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #A46AC8;
+    border-radius: 8px;
+}
+
+/* DETAILS */
+
+details {
+    background-color: #E5D9FF;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* PROGRESS */
+
+progress {
+    width: 250px;
+    height: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #443B50;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    color: #E5D9FF;
+}
+
+/* ID SELECTOR */
+
+#special {
+    color: #A46AC8;
+    font-weight: bold;
+}
+
+/* GROUPING SELECTOR */
+
+h2, h3 {
+    text-align: center;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🌍 MY DREAM TRAVELS</h1>
+
+    <p>Collect Moments, Not Things 💗</p>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="#home">HOME</a>
+
+    <a href="#about">ABOUT</a>
+
+    <a href="#destinations">DESTINATIONS</a>
+
+    <a href="#gallery">GALLERY</a>
+
+    <a href="#contact">CONTACT</a>
+
+</nav>
+
+
+<!-- HOME -->
+
+<section id="home">
+
+    <h1>Explore The World ✈️</h1>
+
+    <p>Discover Beautiful Places Around The World</p>
+
+    <button onclick="document.getElementById('destinations').scrollIntoView()">Explore Now</button>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h1>Welcome To My Dream Travels</h1>
+
+    <hr>
+
+    <p>
+        Travel is not just about visiting places.
+        It is about creating beautiful memories,
+        exploring new cultures and experiencing
+        the beauty of the world.
+    </p>
+
+    <p id="special">
+        My Dream Travels - My World Of Happiness!
+    </p>
+
+</section>
+
+
+<!-- DESTINATIONS -->
+
+<section id="destinations">
+
+    <h1>✨ My Dream Destinations ✨</h1>
+
+    <p>Places I wish to visit in my lifetime.</p>
+
+    <div class="cards">
+
+        <article class="card">
+
+            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7" alt="Switzerland">
+
+            <h3>Switzerland 🇨🇭</h3>
+
+            <p>Beautiful mountains and snowy landscapes.</p>
+
+            <p><b>Dream Rating:</b> <mark>10/10</mark></p>
+
+        </article>
+
+
+        <article class="card">
+
+            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077" alt="Santorini">
+
+            <h3>Santorini 🇬🇷</h3>
+
+            <p>Beautiful white buildings and blue sea.</p>
+
+            <p><b>Dream Rating:</b> <mark>10/10</mark></p>
+
+        </article>
+
+
+        <article class="card">
+
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+
+            <h3>Paris 🇫🇷</h3>
+
+            <p>The beautiful city of lights and romance.</p>
+
+            <p><b>Dream Rating:</b> <mark>10/10</mark></p>
+
+        </article>
+
+
+        <article class="card">
+
+            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2" alt="Bali">
+
+            <h3>Bali 🇮🇩</h3>
+
+            <p>Beautiful beaches and peaceful nature.</p>
+
+            <p><b>Dream Rating:</b> <mark>10/10</mark></p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCES -->
+
+<section id="experiences">
+
+    <h1>🌸 My Dream Experiences</h1>
+
+    <ul class="travel-list">
+
+        <li>Mountain Adventures</li>
+
+        <li>Beach Holidays</li>
+
+        <li>Desert Safari</li>
+
+        <li>Exploring New Cultures</li>
+
+        <li>Photography</li>
+
+    </ul>
+
+    <h3>My Travel Bucket List</h3>
+
+    <ol class="travel-list" type="A">
+
+        <li>Visit Switzerland</li>
+
+        <li>Explore Paris</li>
+
+        <li>Visit Maldives</li>
+
+        <li>Explore Japan</li>
+
+    </ol>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+    <h1>📸 Travel Gallery</h1>
+
+    <figure>
+
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" alt="Mountains">
+
+        <figcaption>Beautiful Mountains</figcaption>
+
+    </figure>
+
+    <figure>
+
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach">
+
+        <figcaption>Beautiful Beaches</figcaption>
+
+    </figure>
+
+    <figure>
+
+        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455" alt="Night Sky">
+
+        <figcaption>Night Sky</figcaption>
+
+    </figure>
+
+</section>
+
+
+<!-- TABLE -->
+
+<section>
+
+    <h1>🌍 My Travel Plans</h1>
+
+    <table>
+
+        <tr>
+
+            <th>Country</th>
+
+            <th>Place</th>
+
+            <th>Dream Priority</th>
+
+        </tr>
+
+        <tr>
+
+            <td>Switzerland</td>
+
+            <td>Mountains</td>
+
+            <td>1</td>
+
+        </tr>
+
+        <tr>
+
+            <td>France</td>
+
+            <td>Paris</td>
+
+            <td>2</td>
+
+        </tr>
+
+        <tr>
+
+            <td>Greece</td>
+
+            <td>Santorini</td>
+
+            <td>3</td>
+
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- TRAVEL TIPS -->
+
+<section class="tips">
+
+    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828" alt="Travel Bag">
+
+    <h2>Travel Tips ✈️</h2>
+
+    <p>
+        Always plan your trip before travelling.
+        Keep your travel documents ready.
+        Explore new places and enjoy every moment.
+    </p>
+
+</section>
+
+
+<!-- DETAILS AND SUMMARY -->
+
+<section>
+
+    <h1>Frequently Asked Questions</h1>
+
+    <details>
+
+        <summary>Why do I love travelling?</summary>
+
+        <p>Because travelling gives me beautiful memories and new experiences.</p>
+
+    </details>
+
+    <details>
+
+        <summary>Which is my dream destination?</summary>
+
+        <p>Switzerland is one of my favourite dream destinations.</p>
+
+    </details>
+
+</section>
+
+
+<!-- CONTACT FORM -->
+
+<section id="contact">
+
+    <h1>💌 Contact Me</h1>
+
+    <form>
+
+        <label>Your Name</label>
+
+        <input type="text" placeholder="Enter your name">
+
+        <br>
+
+        <label>Email</label>
+
+        <input type="email" placeholder="Enter your email">
+
+        <br>
+
+        <label>Choose Your Dream Country</label>
+
+        <select>
+
+            <option>Switzerland</option>
+
+            <option>Paris</option>
+
+            <option>Maldives</option>
+
+            <option>Japan</option>
+
+        </select>
+
+        <br>
+
+        <label>Favourite Travel Type</label>
+
+        <br>
+
+        <input type="radio" name="travel" style="width:auto"> Mountains
+
+        <input type="radio" name="travel" style="width:auto"> Beaches
+
+        <br>
+
+        <label>Interests</label>
+
+        <br>
+
+        <input type="checkbox" style="width:auto"> Photography
+
+        <input type="checkbox" style="width:auto"> Adventure
+
+        <br>
+
+        <textarea rows="4" placeholder="Your message"></textarea>
+
+        <br>
+
+        <button type="submit">Submit</button>
+
+        <button type="reset">Reset</button>
+
+    </form>
+
+</section>
+
+
+<!-- PROGRESS -->
+
+<section style="text-align:center; padding:30px;">
+
+    <h2>My Travel Dreams Progress</h2>
+
+    <progress value="25" max="100"></progress>
+
+    <p>25% Dreams Completed!</p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>🌍 MY DREAM TRAVELS</h2>
+
+    <p>Collect Moments, Not Things 💗</p>
+
+    <p>Thank You For Visiting!</p>
+
+    <p>© 2026 My Dream Travels</p>
+
+</footer>
+
+</body>
+
+</html>
